@@ -49,8 +49,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\AriannaLarson.jpg" />
 	  <None Remove="Resources\Images\contacts.png" />
+	  <None Remove="Resources\Images\LorenzoHewitt.jpg" />
 	  <None Remove="Resources\Images\reminders.png" />
+	  <None Remove="Resources\Images\SusieStafford.jpg" />
 	  <None Remove="Resources\Images\todo.png" />
 	</ItemGroup>
 

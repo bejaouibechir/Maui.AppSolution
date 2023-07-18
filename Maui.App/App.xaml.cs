@@ -1,8 +1,9 @@
-﻿#define shell
+﻿//#define shell
 //#define mainpage
 //#define naviguation
 //#define flyout
 //#define tabbed
+#define passparameter
 
 
 namespace Maui.App;
@@ -18,6 +19,11 @@ public partial class App : Application
 
 #if mainpage
       MainPage = new MainPage();
+#endif
+		//C'est un cas qui traite le passage des paramètres
+		//d'une page à une autre
+#if passparameter
+		MainPage = new AppShell();
 #endif
 
 #if naviguation
@@ -36,5 +42,5 @@ public partial class App : Application
 #endif
 
 
-	}
+    }
 }

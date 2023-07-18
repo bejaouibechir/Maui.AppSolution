@@ -8,7 +8,11 @@
     <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
         <Label Text="Ce ci est une application MAUI" Background="green"
                TextColor="gold"/>
-       
+
+        <Label Text="User Id: "/>
+        <Entry  x:Name="entryId" Placeholder="Entrer user identifier"/>
+        <Button Text="Afficher Details" Clicked="Button_Clicked"/>
+
     </VerticalStackLayout>
 
 </ContentPage>

@@ -6,8 +6,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Maui.App"
     FlyoutIcon="dotnet_bot.svg"
-    Shell.FlyoutBehavior ="Flyout"> <!--En passe au menu volant-->
-    
+    Shell.FlyoutBehavior ="Disabled"> <!--En passe au menu volant-->
+
+    <ShellContent Title="Home"
+                 ContentTemplate="{DataTemplate local:MainPage}"
+                 Route="MainPage" />
+
     <!--Pour remplacer l'icône du menu volant les trois tiret par une
       icône personnalisée il faut utiliser la propriété FlyoutIcon voir 
      la  ligne 8--> 
@@ -17,7 +21,7 @@
 
     <!--#region Flyout page en Shell (Menu Volant)-->
 
-    <Shell.FlyoutHeader>
+    <!--<Shell.FlyoutHeader>
         <Label Text="Menu " FontSize="40"/>
     </Shell.FlyoutHeader>
 
@@ -65,7 +69,7 @@
                     ContentTemplate="{DataTemplate local:DetailsPage}"
                     Route="DetailsPage" />
         </Tab>
-    </FlyoutItem>
+    </FlyoutItem>-->
     
     <!--#endregion-->
     

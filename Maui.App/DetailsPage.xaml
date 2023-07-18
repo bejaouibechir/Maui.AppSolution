@@ -4,9 +4,21 @@
              x:Class="Maui.App.DetailsPage"
              Title="DetailsPage">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+
+        <Image x:Name="imgUser"
+               WidthRequest="100" 
+               HeightRequest="100" />
+
+        <Label Text="User Id: "/>
+        <Label x:Name="lblId"/>
+
+        <Label Text="User Name: "/>
+        <Label x:Name="lblName"/>
+
+        <Label Text="User Email: "/>
+        <Label x:Name="lblEmail"/>
+
+        <Button Text="Afficher Details" Clicked="Button_Clicked"/>
+
     </VerticalStackLayout>
 </ContentPage>
