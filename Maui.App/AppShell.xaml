@@ -1,14 +1,112 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
+    
     x:Class="Maui.App.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Maui.App"
-    Shell.FlyoutBehavior="Disabled">
+    FlyoutIcon="dotnet_bot.svg"
+    Shell.FlyoutBehavior ="Flyout"> <!--En passe au menu volant-->
+    
+    <!--Pour remplacer l'icône du menu volant les trois tiret par une
+      icône personnalisée il faut utiliser la propriété FlyoutIcon voir 
+     la  ligne 8--> 
+    
+    <!--En cas de tabbed page utiliser cette option "-->
+    <!--<Shell.FlyoutBehavior="Disabled">-->
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <!--#region Flyout page en Shell (Menu Volant)-->
+
+    <Shell.FlyoutHeader>
+        <Label Text="Menu " FontSize="40"/>
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutFooter>
+        <Label Text="Mon application 2023 tout les droits reservés ©" 
+               FontSize="15" />
+    </Shell.FlyoutFooter>
+
+    <FlyoutItem Title="Home"
+               Icon="dotnet_bot.svg" >
+         <Tab>
+            <ShellContent 
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Contacts"
+                 Icon="contacts.png">
+        <Tab>
+            <ShellContent
+                ContentTemplate="{DataTemplate local:ContactsPage}"
+                Route="ContactsPage" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="To do"
+                    Icon="todo.png">
+        <Tab >
+            <ShellContent 
+                    ContentTemplate="{DataTemplate local:TodoListPage}"
+                   Route="TodoListPage" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Reminder"
+                Icon="reminders.png">
+        <Tab>
+            <ShellContent 
+                    ContentTemplate="{DataTemplate local:ReminderPage}"
+                    Route="RemiderPage" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Details"
+                Icon="details.png">
+        <Tab>
+            <ShellContent 
+                    ContentTemplate="{DataTemplate local:DetailsPage}"
+                    Route="DetailsPage" />
+        </Tab>
+    </FlyoutItem>
+    
+    <!--#endregion-->
+    
+
+   
+    <!--#region  Mode Tabbed page en Shell-->
+    
+    <!--<TabBar>
+        --><!--L'onglet de la page principale--><!--
+        <Tab
+            Title="Home"
+                Icon="dotnet_bot.svg">
+            <ShellContent
+                
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage" />
+        </Tab>
+        --><!--L'onglet de la page contacts--><!--
+        <Tab Title="Contacts"
+             Icon="contacts.png">
+            <ShellContent
+            ContentTemplate="{DataTemplate local:ContactsPage}"
+            Route="ContactsPage" />
+        </Tab>
+        --><!--L'onglet de la page to do--><!--
+        <Tab Title="To do"
+                Icon="todo.png">
+            <ShellContent 
+                ContentTemplate="{DataTemplate local:TodoListPage}"
+               Route="TodoListPage" />
+        </Tab>
+        --><!--L'onglet de la page reminder--><!--
+        <Tab    Title="Reminder"
+                Icon="reminders.png">
+             <ShellContent 
+                ContentTemplate="{DataTemplate local:ReminderPage}"
+                Route="RemiderPage" />
+        </Tab>
+       
+    </TabBar>-->
+    
+    <!--#endregion-->
 
 </Shell>

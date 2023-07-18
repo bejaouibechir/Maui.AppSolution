@@ -1,7 +1,8 @@
-﻿//#define shell
+﻿#define shell
 //#define mainpage
 //#define naviguation
-#define flyout
+//#define flyout
+//#define tabbed
 
 
 namespace Maui.App;
@@ -29,6 +30,9 @@ public partial class App : Application
 
 #if flyout
    MainPage = new FlyoutPageDemo();
+#endif
+#if tabbed
+		MainPage = new TabbedPageDemo();
 #endif
 
 
