@@ -1,6 +1,6 @@
 ﻿//#define shell
 //#define mainpage
-#define newpage1
+#define naviguation
 
 namespace Maui.App;
 
@@ -16,8 +16,15 @@ public partial class App : Application
 #if mainpage
       MainPage = new MainPage();
 #endif
-#if newpage1
-     MainPage = new NewPage1();
+
+#if naviguation
+     var navpage = new NavigationPage(new MainPage { Title ="Home"});
+        navpage.Title = "Home";
+		navpage.BarTextColor = Colors.Gold;
+		navpage.BarBackgroundColor = Colors.Red;
+     MainPage = navpage;
 #endif
+
+
 	}
 }

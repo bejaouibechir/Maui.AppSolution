@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maui.App.SecondPage"
+             Title="SecondPage">
+    <VerticalStackLayout VerticalOptions="Center" 
+                         HorizontalOptions="Center">
+        <Label 
+            Background="Red"
+            Text="Bien venu dans la seconde page"
+            FontSize="40"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Button Text="Troisième Page" 
+                Clicked="Button_Clicked"/>
+        <!--Un bouton pour gérer l'état modal de second page-->
+        <Button Text="Troisième Page" 
+                Clicked="Button_Clicked_1"/>
+        <!--Un bouton pour pousser la page TestPage-->
+        <Button Text="Inserer Test Page" 
+                Clicked="Button_Clicked_2"/>
+
+    </VerticalStackLayout>
+</ContentPage>
