@@ -8,13 +8,7 @@
     <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
         <Label Text="Ce ci est une application MAUI" Background="green"
                TextColor="gold"/>
-        <Button Text="Seconde page" 
-                Clicked="Button_Clicked"
-                Background="red" TextColor="White"/>
-        <Button Text="Seconde page (Modal Mode)" 
-                Clicked="Button_Clicked_1"
-                Background="red" TextColor="White"/>
-        
+       
     </VerticalStackLayout>
 
 </ContentPage>

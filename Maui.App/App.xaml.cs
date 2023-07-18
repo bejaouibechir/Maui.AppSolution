@@ -1,6 +1,8 @@
 ﻿//#define shell
 //#define mainpage
-#define naviguation
+//#define naviguation
+#define flyout
+
 
 namespace Maui.App;
 
@@ -23,6 +25,10 @@ public partial class App : Application
 		navpage.BarTextColor = Colors.Gold;
 		navpage.BarBackgroundColor = Colors.Red;
      MainPage = navpage;
+#endif
+
+#if flyout
+   MainPage = new FlyoutPageDemo();
 #endif
 
 
