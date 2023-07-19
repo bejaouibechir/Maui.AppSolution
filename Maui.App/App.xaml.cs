@@ -1,6 +1,7 @@
 ﻿//#define shell
 //#define mainpage
-#define newpage1
+//#define newpage1
+#define layout
 
 namespace Maui.App;
 
@@ -16,8 +17,9 @@ public partial class App : Application
 #if mainpage
       MainPage = new MainPage();
 #endif
-#if newpage1
-     MainPage = new NewPage1();
+#if layout
+     MainPage = new LayoutPageDemo();
 #endif
+
 	}
 }
