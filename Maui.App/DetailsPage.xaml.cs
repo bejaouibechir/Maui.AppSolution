@@ -10,8 +10,6 @@ public partial class DetailsPage : ContentPage
 	{
 		InitializeComponent();
         _people = new People();
-
-		
 	}
 
 

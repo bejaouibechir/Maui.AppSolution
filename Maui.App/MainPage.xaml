@@ -4,6 +4,19 @@
              xmlns:scg="clr-namespace:System.Collections.Generic;assembly=netstandard"
              xmlns:local="clr-namespace:Maui.App"
              x:Class="Maui.App.MainPage">
+    
+    <!--Searching activities--> 
+    <!--#region  Add the Search hendler view-->
+    
+    <Shell.SearchHandler>
+        <local:UserSearchHandler   QueryIcon="todo.png"
+                                   ClearIcon="reminders.png" 
+                                 Placeholder="Taper un nom ici"
+                                 ShowsResults="True"
+                                 DisplayMemberName="Name" />
+    </Shell.SearchHandler>
+    
+    <!--#endregion-->
 
     <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
         <Label Text="Ce ci est une application MAUI" Background="green"
